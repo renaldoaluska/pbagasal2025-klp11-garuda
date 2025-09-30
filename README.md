@@ -1,6 +1,6 @@
 # Analisis Sentimen, POS, dan NER Maskapai Garuda Indonesia pada Artikel Berita
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg) ![Framework](https://img.shields.io/badge/Framework-Selenium-green.svg)
 
 Repositori ini berisi kode dan sumber daya untuk proyek **Analisis Sentimen, Part-of-Speech (POS) Tagging, dan Named Entity Recognition (NER)** terhadap maskapai Garuda Indonesia berdasarkan data artikel berita daring.
 
