@@ -41,54 +41,6 @@ Alur kerja penelitian ini dibagi menjadi tiga tahap utama sesuai dengan yang dij
 
 ## 📂 Struktur Repositori
 
-Repositori ini diatur dengan struktur sebagai berikut untuk kemudahan navigasi dan replikasi:
-.
-├── data/
-│   ├── raw/
-│   │   └── link_berita_garudaindonesia.csv  (Data mentah hasil scraping)
-│   └── processed/
-│       └── garuda_news_preprocessed.csv   (Data bersih siap analisis)
-├── notebooks/
-│   ├── 01_Data_Acquisition.ipynb          (Notebook untuk scraping data)
-│   ├── 02_Preprocessing_and_EDA.ipynb     (Notebook untuk pembersihan dan EDA)
-│   └── 03_Analysis_and_Modeling.ipynb     (Notebook untuk TF-IDF, Sentimen, POS, NER)
-├── report/
-│   └── 2025-1_Klp-11_Paper.pdf            (Laporan akhir proyek)
-├── requirements.txt                       (Daftar pustaka Python yang dibutuhkan)
-└── README.md                              (Anda sedang membacanya)
-
-
-## 🚀 Cara Menjalankan
-
-Untuk mereplikasi hasil dari penelitian ini, ikuti langkah-langkah berikut:
-
-1.  **Clone Repositori**
-    ```bash
-    git clone [https://github.com/renaldoaluska/pbagasal2025-klp11-garuda.git](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda.git)
-    cd pbagasal2025-klp11-garuda
-    ```
-
-2.  **Buat Lingkungan Virtual (Opsional tapi Direkomendasikan)**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # Untuk Windows: venv\Scripts\activate
-    ```
-
-3.  **Instal Dependensi**
-    Pastikan Anda memiliki file `requirements.txt` yang berisi semua pustaka yang digunakan, lalu jalankan:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Jalankan Notebooks**
-    Buka dan jalankan Jupyter Notebooks di dalam direktori `/notebooks` secara berurutan:
-    -   `01_Data_Acquisition.ipynb`
-    -   `02_Preprocessing_and_EDA.ipynb`
-    -   `03_Analysis_and_Modeling.ipynb`
-
-## 📊 Hasil dan Pembahasan
-
-Hasil analisis mendalam, temuan utama, visualisasi data, dan kesimpulan disajikan secara lengkap dalam laporan akhir proyek. Silakan merujuk ke dokumen:
-[**`report/2025-1_Klp-11_Paper.pdf`**](./report/2025-1_Klp-11_Paper.pdf)
+Repositori ini diatur dengan struktur sebagai berikut untuk kemudahan navigasi dan replikasi.
 
 ---
