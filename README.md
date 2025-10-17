@@ -1,46 +1,160 @@
-# Analisis Sentimen, POS, dan NER Maskapai Garuda Indonesia pada Artikel Berita
+# 🦅 Analisis Sentimen, POS, dan NER Garuda Indonesia pada Artikel Berita
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg) ![Framework](https://img.shields.io/badge/Framework-Selenium-green.svg)
+<p align="center">
+  <img src="assets/garuda_logo.png" alt="Garuda Indonesia Logo" width="150"/><br>
+  <b>Natural Language Processing Project — Departemen Sistem Informasi, ITS</b><br>
+  <i>Semester Gasal 2025</i>
+</p>
 
-Repositori ini berisi kode dan sumber daya untuk proyek **Analisis Sentimen, Part-of-Speech (POS) Tagging, dan Named Entity Recognition (NER)** terhadap maskapai Garuda Indonesia berdasarkan data artikel berita daring.
+---
+
+## 📘 Deskripsi Proyek
+
+Proyek ini merupakan bagian dari mata kuliah **Pengolahan Bahasa Alami (A)** yang menganalisis bagaimana **maskapai Garuda Indonesia** diberitakan di media daring.  
+Analisis dilakukan melalui integrasi tiga pendekatan utama dalam *Natural Language Processing (NLP)*:
+
+- 🔹 **Sentiment Analysis**
+- 🔹 **Part-of-Speech (POS) Tagging**
+- 🔹 **Named Entity Recognition (NER)**
+
+Pendekatan yang digunakan mengombinasikan **TF-IDF**, **IndoBERT**, dan **GPT-4.1** untuk menghasilkan insight yang komprehensif mengenai persepsi publik terhadap Garuda Indonesia.
 
 ---
 
-## 📄 Informasi Proyek
+## 🚀 Pipeline Proyek
 
-Proyek ini merupakan tugas akhir untuk mata kuliah **Pengolahan Bahasa Alami (A)** pada Departemen Sistem Informasi, Institut Teknologi Sepuluh Nopember (ITS) untuk Semester Gasal 2025.
-
-**Anggota Kelompok 11:**
-* Jason Ho (5026221005)
-* Alfa Renaldo Aluska (5026221144)
-
-## 🎯 Latar Belakang
-
-Di era digital, persepsi publik terhadap sebuah korporasi seperti Garuda Indonesia sangat dipengaruhi oleh pemberitaan di media daring. Berbeda dari media sosial yang subjektif, artikel berita memiliki struktur bahasa yang lebih formal dan kredibilitas yang lebih tinggi. Penelitian ini bertujuan untuk menganalisis secara komprehensif bagaimana Garuda Indonesia direpresentasikan di media massa melalui tiga pendekatan utama: analisis sentimen, identifikasi entitas (NER), dan penandaan kelas kata (POS tagging).
-
-## ⚙️ Metodologi Penelitian
-
-Alur kerja penelitian ini dibagi menjadi tiga tahap utama sesuai dengan yang dijelaskan dalam laporan:
-
-1.  **Akuisisi Data:**
-    * Mengumpulkan data artikel berita dari Google News dengan kata kunci "Garuda Indonesia".
-    * Proses *scraping* dilakukan secara otomatis menggunakan **Python** dengan pustaka **Selenium** untuk mengekstraksi judul, tautan, tanggal terbit, dan nama portal.
-    * Konten lengkap dari setiap artikel kemudian diunduh berdasarkan tautan yang telah dikumpulkan.
-
-2.  **Pra-pemrosesan & EDA:**
-    * Membersihkan data teks dari artikel berbahasa Inggris.
-    * Melakukan standarisasi teks melalui *lowercasing* (mengubah ke huruf kecil).
-    * Menghapus kata-kata umum yang tidak signifikan (*stopwords removal*).
-    * Mengubah kata ke bentuk dasarnya melalui proses *lemmatization* atau *stemming*.
-    * Melakukan Analisis Data Eksploratif (EDA) untuk memahami distribusi data.
-
-3.  **Analisis:**
-    * Menerapkan **TF-IDF** untuk ekstraksi fitur dan mengidentifikasi kata-kata penting.
-    * Melakukan **Analisis Sentimen** untuk mengklasifikasikan artikel ke dalam sentimen positif, negatif, atau netral.
-    * Menerapkan **POS Tagging** dan **NER** untuk mendapatkan wawasan gramatikal dan mengidentifikasi entitas seperti nama orang, organisasi, dan lokasi.
-
-## 📂 Struktur Repositori
-
-Repositori ini diatur dengan struktur sebagai berikut untuk kemudahan navigasi dan replikasi.
+```mermaid
+flowchart TD
+    A[Scraping Berita (Google News + Selenium)] --> B[Preprocessing: Cleaning, Normalization, Stopword Removal, Stemming]
+    B --> C[Exploratory Data Analysis (EDA)]
+    C --> D[Sentiment & Topic Classification (GPT-4.1 API)]
+    D --> E[TF-IDF, POS & NER (IndoBERT)]
+    E --> F[Visualization & WordCloud]
+    F --> G[Insight & Reporting (PDF)]
+```
 
 ---
+
+## 🧩 Struktur Repository
+
+```bash
+📂 garuda-sentiment-analysis
+├── notebooks/
+│   ├── 1_data_acquisition.ipynb
+│   ├── 2_preprocessing.ipynb
+│   ├── 3_analysis_EDA.ipynb
+│   ├── 4_sentiment_pos_ner.ipynb
+│   └── 5_visualization.ipynb
+├── data/
+│   ├── raw/                 # hasil scraping mentah
+│   ├── processed/           # hasil preprocessing
+│   └── cleaned/             # data siap analisis
+├── report/
+│   ├── 2025-1_Klp-11_Paper.pdf
+│   └── figures/
+├── scripts/
+│   ├── extract_images_pymupdf.py
+│   └── utils_textprep.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Instalasi & Menjalankan Notebook
+
+```bash
+# clone repository
+git clone https://github.com/<username>/garuda-sentiment-analysis.git
+cd garuda-sentiment-analysis
+
+# buat virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# install dependensi
+pip install -r requirements.txt
+
+# jalankan notebook di Jupyter atau VSCode
+jupyter notebook
+```
+
+---
+
+## 🧠 Model & Tools yang Digunakan
+
+| Komponen | Deskripsi |
+|-----------|------------|
+| **TF-IDF (scikit-learn)** | Menghitung bobot kata penting dari korpus berita |
+| **IndoBERT-NER (cahya/bert-base-indonesian-NER)** | Mengidentifikasi entitas seperti nama, lokasi, organisasi |
+| **GPT-4.1 (OpenAI API)** | Menghasilkan label sentimen & kategori topik otomatis |
+| **Sastrawi** | Proses stemming Bahasa Indonesia |
+| **Matplotlib / WordCloud** | Visualisasi distribusi kata & sentimen |
+
+---
+
+## 📊 Hasil Utama
+
+| Aspek | Temuan |
+|-------|---------|
+| 💬 **Distribusi Sentimen** | Didominasi *netral–positif*, menandakan citra media yang baik |
+| 🧾 **Topik Dominan** | “Kinerja & Keuangan” serta “Operasional & Pelayanan” |
+| 🧍 **Entitas Populer** | *Erick Thohir*, *Kementerian BUMN*, *PT Garuda Indonesia (Persero) Tbk* |
+| 🔠 **Kata TF-IDF Utama** | *laba*, *utang*, *restrukturisasi*, *pelayanan* |
+
+---
+
+<details>
+<summary>📈 Klik untuk melihat visualisasi utama</summary>
+
+![Sentiment Distribution](report/figures/sentiment_bar.png)
+![WordCloud Positive](report/figures/wordcloud_positive.png)
+![NER Entities](report/figures/ner_sample.png)
+
+</details>
+
+---
+
+## 🧩 Interaktif & Eksperimen
+
+Jalankan notebook interaktif berikut untuk bereksperimen langsung:
+- [`notebooks/3_analysis_EDA.ipynb`](notebooks/3_analysis_EDA.ipynb)
+- [`notebooks/4_sentiment_pos_ner.ipynb`](notebooks/4_sentiment_pos_ner.ipynb)
+
+Atau buka versi *live* di Google Colab (jika tersedia):
+
+👉 [**Open in Colab**](https://colab.research.google.com/github/<username>/garuda-sentiment-analysis/blob/main/notebooks/4_sentiment_pos_ner.ipynb)
+
+---
+
+## 🧾 Referensi Utama
+
+Beberapa penelitian yang menjadi acuan:
+
+- Pravina et al. (2019). *Analisis Sentimen Maskapai Penerbangan dengan SVM*  
+- Telaumbanua (2023). *Analisis Sentimen Berbasis Aspek Garuda Indonesia*  
+- Prasetyo et al. (2024). *Comparative Analysis of MultinomialNB, SVM, and BERT*  
+- Rozi et al. (2019). *Hybrid Cuckoo Search pada Opini Pengguna Maskapai*  
+- Salma (2022). *Online Public Sentiment Toward Corporate Crisis (Case of Garuda Indonesia)*  
+
+---
+
+## 👥 Anggota Kelompok
+
+| Nama | NRP |
+|------|-----|
+| Jason Ho | 5026221005 |
+| Alfa Renaldo Aluska | 5026221144 |
+
+---
+
+## 🧾 Lisensi
+
+Proyek ini bersifat akademik dan open-source di bawah lisensi [MIT License](LICENSE).
+
+---
+
+<p align="center">
+  <b>🚀 Analisis Sentimen Garuda Indonesia</b><br>
+  <i>“Data speaks louder than perception.”</i>
+</p>
