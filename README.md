@@ -41,49 +41,16 @@ flowchart TD
 📂 (root)
 ├── 1-Garuda Indonesia Reviews/
 │   ├── 1-1-Scraping Reviews/
-│   │   ├── flygaruda_data_scrapping.ipynb
-│   │   └── garuda_reviews.csv
 │   └── 1-2-Data Praprocessing Reviews/
-│       ├── cleaned_garuda_reviews.csv
-│       ├── colloquial-indonesian-lexicon.csv
-│       ├── flygaruda_bow.ipynb
-│       ├── flygaruda_eda.ipynb
-│       ├── flygaruda_preprocess.ipynb
-│       ├── flygaruda_regex.ipynb
-│       ├── flygaruda_reviews_clean_label.csv
-│       └── regex_garuda_reviews.csv
 │
 ├── 2-Garuda Indonesia News Articles/
 │   ├── 1-Akuisisi Data Scraping News Articles/
-│   │   ├── 1-Scraping News Title and Link/
-│   │   │   ├── Scraping_GarudaIndonesia_LinkNews.ipynb
-│   │   │   ├── link_berita_garudaindonesia.csv
-│   │   │   ├── link_berita_garudaindonesia.xlsx
-│   │   │   └── link_berita_garudaindonesia_cleaned.csv
-│   │   └── 2-Scraping and Cleaning News Content/
-│   │       ├── data_link_berita_with_content.csv
-│   │       ├── data_link_berita_with_content_cleaned.csv
-│   │       ├── data_link_berita_with_content_cleaned_manual.csv
-│   │       ├── py1-Scrap_Garuda_Indonesia_News_Content.ipynb
-│   │       ├── py2-Clean_Garuda_Indonesia_News_Content.ipynb
-│   │       └── py3-Data_Desc_Garuda_Indonesia_News_Content.ipynb
 │   └── 2-Praproses dan Analisis News Articles/
-│       ├── CSV Outputs-Inputs/
-│       ├── py1-preprocess.ipynb
-│       ├── py2-sentiment_tag_new.ipynb
-│       ├── py3-EDA_rarewords_sentiment.ipynb
-│       ├── py4-TF_IDF.ipynb
-│       ├── py5-NER.ipynb
-│       └── py6-POS.ipynb
 │
 ├── report/
-│   ├── 2025-1_Klp-11_Paper.pdf
-│   └── figures/            # (opsional) output visualisasi
+│   └── 2025-1_Klp-11_Paper.pdf
 │
 ├── scripts/
-│   ├── extract_images_pymupdf.py
-│   └── utils_textprep.py
-│
 ├── requirements.txt
 └── README.md
 ```
@@ -94,8 +61,8 @@ flowchart TD
 
 ```bash
 # clone repository
-git clone https://github.com/<username>/<repo>.git
-cd <repo>
+git clone https://github.com/renaldoaluska/pbagasal2025-klp11-garuda.git
+cd pbagasal2025-klp11-garuda
 
 # buat virtual environment
 python -m venv venv
@@ -127,26 +94,26 @@ jupyter notebook
 
 ## 🧩 Notebook Interaktif
 
-**Reviews (ulasan penumpang)**
-- `1-Garuda Indonesia Reviews/1-1-Scraping Reviews/flygaruda_data_scrapping.ipynb`
-- `1-Garuda Indonesia Reviews/1-2-Data Praprocessing Reviews/flygaruda_preprocess.ipynb`
-- `1-Garuda Indonesia Reviews/1-2-Data Praprocessing Reviews/flygaruda_regex.ipynb`
-- `1-Garuda Indonesia Reviews/1-2-Data Praprocessing Reviews/flygaruda_eda.ipynb`
-- `1-Garuda Indonesia Reviews/1-2-Data Praprocessing Reviews/flygaruda_bow.ipynb`
+### 🟦 Garuda Indonesia Reviews
+- [1-1 Scraping Reviews — flygaruda_data_scrapping.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/1-Garuda%20Indonesia%20Reviews/1-1-Scraping%20Reviews/flygaruda_data_scrapping.ipynb)
+- [1-2 Preprocessing — flygaruda_preprocess.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/1-Garuda%20Indonesia%20Reviews/1-2-Data%20Praprocessing%20Reviews/flygaruda_preprocess.ipynb)
+- [1-2 Regex Cleaning — flygaruda_regex.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/1-Garuda%20Indonesia%20Reviews/1-2-Data%20Praprocessing%20Reviews/flygaruda_regex.ipynb)
+- [1-2 Exploratory Analysis — flygaruda_eda.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/1-Garuda%20Indonesia%20Reviews/1-2-Data%20Praprocessing%20Reviews/flygaruda_eda.ipynb)
+- [1-2 Bag of Words — flygaruda_bow.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/1-Garuda%20Indonesia%20Reviews/1-2-Data%20Praprocessing%20Reviews/flygaruda_bow.ipynb)
 
-**News Articles (artikel berita)**
-- `2-Garuda Indonesia News Articles/1-Akuisisi Data Scraping News Articles/1-Scraping News Title and Link/Scraping_GarudaIndonesia_LinkNews.ipynb`
-- `2-Garuda Indonesia News Articles/1-Akuisisi Data Scraping News Articles/2-Scraping and Cleaning News Content/py1-Scrap_Garuda_Indonesia_News_Content.ipynb`
-- `2-Garuda Indonesia News Articles/1-Akuisisi Data Scraping News Articles/2-Scraping and Cleaning News Content/py2-Clean_Garuda_Indonesia_News_Content.ipynb`
-- `2-Garuda Indonesia News Articles/1-Akuisisi Data Scraping News Articles/2-Scraping and Cleaning News Content/py3-Data_Desc_Garuda_Indonesia_News_Content.ipynb`
-- `2-Garuda Indonesia News Articles/2-Praproses dan Analisis News Articles/py1-preprocess.ipynb`
-- `2-Garuda Indonesia News Articles/2-Praproses dan Analisis News Articles/py2-sentiment_tag_new.ipynb`
-- `2-Garuda Indonesia News Articles/2-Praproses dan Analisis News Articles/py3-EDA_rarewords_sentiment.ipynb`
-- `2-Garuda Indonesia News Articles/2-Praproses dan Analisis News Articles/py4-TF_IDF.ipynb`
-- `2-Garuda Indonesia News Articles/2-Praproses dan Analisis News Articles/py5-NER.ipynb`
-- `2-Garuda Indonesia News Articles/2-Praproses dan Analisis News Articles/py6-POS.ipynb`
+### 🟨 Garuda Indonesia News Articles
+- [Scraping News Title & Link — Scraping_GarudaIndonesia_LinkNews.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/1-Akuisisi%20Data%20Scraping%20News%20Articles/1-Scraping%20News%20Title%20and%20Link/Scraping_GarudaIndonesia_LinkNews.ipynb)
+- [Scraping News Content — py1-Scrap_Garuda_Indonesia_News_Content.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/1-Akuisisi%20Data%20Scraping%20News%20Articles/2-Scraping%20and%20Cleaning%20News%20Content/py1-Scrap_Garuda_Indonesia_News_Content.ipynb)
+- [Cleaning News Content — py2-Clean_Garuda_Indonesia_News_Content.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/1-Akuisisi%20Data%20Scraping%20News%20Articles/2-Scraping%20and%20Cleaning%20News%20Content/py2-Clean_Garuda_Indonesia_News_Content.ipynb)
+- [Deskripsi Data — py3-Data_Desc_Garuda_Indonesia_News_Content.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/1-Akuisisi%20Data%20Scraping%20News%20Articles/2-Scraping%20and%20Cleaning%20News%20Content/py3-Data_Desc_Garuda_Indonesia_News_Content.ipynb)
+- [Preprocessing — py1-preprocess.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/2-Praproses%20dan%20Analisis%20News%20Articles/py1-preprocess.ipynb)
+- [Sentiment Tagging — py2-sentiment_tag_new.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/2-Praproses%20dan%20Analisis%20News%20Articles/py2-sentiment_tag_new.ipynb)
+- [EDA & Rare Words — py3-EDA_rarewords_sentiment.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/2-Praproses%20dan%20Analisis%20News%20Articles/py3-EDA_rarewords_sentiment.ipynb)
+- [TF-IDF Analysis — py4-TF_IDF.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/2-Praproses%20dan%20Analisis%20News%20Articles/py4-TF_IDF.ipynb)
+- [Named Entity Recognition — py5-NER.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/2-Praproses%20dan%20Analisis%20News%20Articles/py5-NER.ipynb)
+- [Part-of-Speech Tagging — py6-POS.ipynb](https://github.com/renaldoaluska/pbagasal2025-klp11-garuda/blob/main/2-Garuda%20Indonesia%20News%20Articles/2-Praproses%20dan%20Analisis%20News%20Articles/py6-POS.ipynb)
 
-> Catatan: seluruh notebook berjalan **lokal** di repo ini (tidak ada tautan Colab).
+> 💡 Semua notebook bisa diklik langsung dari GitHub untuk dilihat atau dijalankan secara lokal.
 
 ---
 
@@ -158,15 +125,6 @@ jupyter notebook
 | 🧾 **Topik Dominan** | “Kinerja & Keuangan”, “Operasional & Pelayanan” |
 | 🧍 **Entitas Populer** | *Erick Thohir*, *Kementerian BUMN*, *PT Garuda Indonesia (Persero) Tbk* |
 | 🔠 **Kata TF-IDF Utama** | *laba*, *utang*, *restrukturisasi*, *pelayanan* |
-
-<details>
-<summary>📈 Tampilkan contoh visualisasi</summary>
-
-![Sentiment Distribution](report/figures/sentiment_bar.png)
-![WordCloud Positive](report/figures/wordcloud_positive.png)
-![NER Entities](report/figures/ner_sample.png)
-
-</details>
 
 ---
 
