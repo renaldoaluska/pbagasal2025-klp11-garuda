@@ -1,7 +1,7 @@
 # 🦅 Analisis Sentimen, POS, dan NER Garuda Indonesia pada Artikel Berita
 
 <p align="center">
-  <img src="assets/garuda_logo.png" alt="Garuda Indonesia Logo" width="150"/><br>
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fe/Garuda_Indonesia_Logo.svg/1200px-Garuda_Indonesia_Logo.svg.png" alt="Garuda Indonesia Logo" width="150"/><br>
   <b>Natural Language Processing Project — Departemen Sistem Informasi, ITS</b><br>
   <i>Semester Gasal 2025</i>
 </p>
@@ -25,12 +25,12 @@ Pendekatan yang digunakan mengombinasikan **TF-IDF**, **IndoBERT**, dan **GPT-4.
 
 ```mermaid
 flowchart TD
-    A[Scraping Berita (Google News + Selenium)] --> B[Preprocessing: Cleaning, Normalization, Stopword Removal, Stemming]
-    B --> C[Exploratory Data Analysis (EDA)]
-    C --> D[Sentiment & Topic Classification (GPT-4.1 API)]
-    D --> E[TF-IDF, POS & NER (IndoBERT)]
-    E --> F[Visualization & WordCloud]
-    F --> G[Insight & Reporting (PDF)]
+    A["Scraping Berita (Google News + Selenium)"] --> B["Preprocessing: Cleaning, Normalization, Stopword Removal, Stemming"]
+    B --> C["Exploratory Data Analysis (EDA)"]
+    C --> D["Sentiment & Topic Classification (GPT-4.1 API)"]
+    D --> E["TF-IDF, POS & NER (IndoBERT)"]
+    E --> F["Visualization & WordCloud"]
+    F --> G["Insight & Reporting (PDF)"]
 ```
 
 ---
